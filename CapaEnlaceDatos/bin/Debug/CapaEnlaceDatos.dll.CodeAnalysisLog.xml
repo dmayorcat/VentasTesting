@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos\bin\Debug\CapaEnlaceDatos.dll">
+   <Modules>
+    <Module Name="capaenlacedatos.dll">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Firme 'CapaEnlaceDatos.dll' con una clave de nombre seguro.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Marque 'CapaEnlaceDatos.dll' con CLSCompliant(true) porque expone tipos visibles externamente.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="CapaEnlaceDatos">
+       <Types>
+        <Type Name="clsManejador" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="cls" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija el uso de mayúsculas y minúsculas en 'cls' en el nombre del tipo 'clsManejador' cambiándolo a 'Cls'.</Issue>
+          </Message>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implemente IDisposable en 'clsManejador' porque crea miembros de los tipos IDisposable siguientes: 'SqlConnection'. Si ya se había distribuido 'clsManejador', agregar nuevos miembros que implementen IDisposable en este tipo se considera un cambio rotundo para los consumidores existentes.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#conexion" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Puesto que el campo 'clsManejador.conexion' es visible fuera del tipo declarativo, cambie su accesibilidad a privada y agregue una propiedad, con la misma accesibilidad que tiene el campo actualmente, para proporcionar acceso a él.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EjecutarSP(System.String,System.Collections.Generic.List`1&lt;CapaEnlaceDatos.clsParametro&gt;&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Desechar (Dispose) objetos antes de perder el ámbito" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsManejador.cs" Line="56">En el método 'clsManejador.EjecutarSP(string, ref List&lt;clsParametro&gt;)', llame a System.IDisposable.Dispose en el objeto 'cmd' antes de que todas las referencias a él estén fuera de ámbito.</Issue>
+            </Message>
+            <Message Id="1#" TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsManejador.cs" Line="51">Considere el uso de un diseño que no requiera que 'lst' sea un parámetro de referencia.</Issue>
+            </Message>
+            <Message Id="Nombre" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsManejador.cs" Line="51">En el miembro 'clsManejador.EjecutarSP(string, ref List&lt;clsParametro&gt;)', corrija el uso de mayúsculas y minúsculas en 'Nombre' en el nombre del parámetro 'NombreSP' cambiándolo a 'nombre'.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsManejador.cs" Line="74">'clsManejador.EjecutarSP(string, ref List&lt;clsParametro&gt;)' vuelve a producir una excepción detectada y la especifica explícitamente como un argumento. Utilice 'throw' sin un argumento, para mantener la ubicación de la pila donde se provocó inicialmente la excepción.</Issue>
+            </Message>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsManejador.cs" Line="56">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'clsManejador.EjecutarSP(string, ref List&lt;clsParametro&gt;)' podría contener las siguientes variables: 'NombreSP'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validar argumentos de métodos públicos" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="DependsOnFix">
+             <Issue Name="Reassigned" Certainty="75" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsManejador.cs" Line="59">En el método 'clsManejador.EjecutarSP(string, ref List&lt;clsParametro&gt;)' visible externamente, valide la variable local ''(*lst)'', que se reasignó desde el parámetro 'lst', antes de usarlo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Listado(System.String,System.Collections.Generic.List`1&lt;CapaEnlaceDatos.clsParametro&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Desechar (Dispose) objetos antes de perder el ámbito" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsManejador.cs" Line="28">En el método 'clsManejador.Listado(string, List&lt;clsParametro&gt;)', no se desecha (Dispose) el objeto 'dt' en todas las rutas de acceso de excepciones. Llame a System.IDisposable.Dispose en el objeto 'dt' antes de que todas las referencias a él estén fuera de ámbito.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsManejador.cs" Line="33">En el método 'clsManejador.Listado(string, List&lt;clsParametro&gt;)', llame a System.IDisposable.Dispose en el objeto 'da' antes de que todas las referencias a él estén fuera de ámbito.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsManejador.cs" Line="27">Cambie ''List&lt;clsParametro&gt;'' en 'clsManejador.Listado(string, List&lt;clsParametro&gt;)' para que use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; o KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="Nombre" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsManejador.cs" Line="27">En el miembro 'clsManejador.Listado(string, List&lt;clsParametro&gt;)', corrija el uso de mayúsculas y minúsculas en 'Nombre' en el nombre del parámetro 'NombreSP' cambiándolo a 'nombre'.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsManejador.cs" Line="43">'clsManejador.Listado(string, List&lt;clsParametro&gt;)' vuelve a producir una excepción detectada y la especifica explícitamente como un argumento. Utilice 'throw' sin un argumento, para mantener la ubicación de la pila donde se provocó inicialmente la excepción.</Issue>
+            </Message>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsManejador.cs" Line="33">La cadena de consulta pasada a 'SqlDataAdapter.SqlDataAdapter(string, SqlConnection)' en 'clsManejador.Listado(string, List&lt;clsParametro&gt;)' podría contener las siguientes variables: 'NombreSP'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsManejador.cs" Line="28">Asegúrese de establecer la propiedad Locale DataTable donde 'clsManejador.Listado(string, List&lt;clsParametro&gt;)' cree una instancia de este tipo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="clsParametro" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="cls" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija el uso de mayúsculas y minúsculas en 'cls' en el nombre del tipo 'clsParametro' cambiándolo a 'Cls'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor(System.String,System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="obj" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="Breaking">
+             <Issue Name="LanguageIndependentMemberParameter" Certainty="75" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsParametro.cs" Line="47">En el miembro 'clsParametro.clsParametro(string, object)', considere reemplazar el identificador del tipo de datos 'obj' en el nombre del parámetro 'objValor' por un término más genérico, como 'value'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(System.String,System.Object,System.Data.SqlDbType,System.Data.ParameterDirection,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="obj" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="Active" Created="2018-12-08 14:06:06Z" FixCategory="Breaking">
+             <Issue Name="LanguageIndependentMemberParameter" Certainty="75" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaEnlaceDatos" File="clsParametro.cs" Line="53">En el miembro 'clsParametro.clsParametro(string, object, SqlDbType, ParameterDirection, int)', considere reemplazar el identificador del tipo de datos 'obj' en el nombre del parámetro 'objValor' por un término más genérico, como 'value'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Los ensamblados deben tener nombres seguros válidos</Name>
+   <Description>Puede que el ensamblado no tenga un nombre seguro, que no sea válido o que éste sea válido únicamente por la configuración del equipo. No se puede implementar el ensamblado en este estado. Las causas más probables son: 1) El contenido del ensamblado se modificó después de firmarlo. 2) Error en el proceso de firma. 3) El ensamblado tenía firma retardada. 4) Existía una clave del Registro que permitió que se realizara la comprobación (de lo contrario no se hubiera realizado).</Description>
+   <Resolution Name="NoStrongName">Firme {0} con una clave de nombre seguro.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Desechar (Dispose) objetos antes de perder el ámbito" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Desechar (Dispose) objetos antes de perder el ámbito</Name>
+   <Description>Si un objeto que se puede desechar (método Dispose) no se desecha de forma explícita antes de que todas las referencias a él estén fuera de ámbito, el objeto se desechará en algún momento indeterminado cuando el recolector de elementos no utilizados ejecute el finalizador del objeto. Puesto que podría producirse un evento excepcional que impida que se ejecute el finalizador del objeto, el objeto debe desecharse de forma explícita.</Description>
+   <Resolution Name="ExceptionEdge">En el método {0}, no se desecha (Dispose) el objeto {1} en todas las rutas de acceso de excepciones. Llame a System.IDisposable.Dispose en el objeto {1} antes de que todas las referencias a él estén fuera de ámbito.</Resolution>
+   <Resolution Name="NonExceptionEdge">En el método {0}, llame a System.IDisposable.Dispose en el objeto {1} antes de que todas las referencias a él estén fuera de ámbito.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+   <Name>No declarar campos de instancia visibles</Name>
+   <Description>Los campos de instancia que son visibles fuera del tipo que los declara, limitan la capacidad de cambiar los detalles de la implementación de esos elementos de datos. Use propiedades en su lugar. No comprometen el uso o el rendimiento, y proporcionan flexibilidad porque ocultan los detalles de la implementación de los datos subyacentes.</Description>
+   <Resolution Name="Default">Puesto que el campo {0} es visible fuera del tipo declarativo, cambie su accesibilidad a privada y agregue una propiedad, con la misma accesibilidad que tiene el campo actualmente, para proporcionar acceso a él.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182141.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>No exponer listas genéricas</Name>
+   <Description>No exponga List&lt;T&gt; en modelos de objetos. Utilice Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; o KeyedCollection&lt;K,V&gt; en su lugar. Debe utilizar List&lt;T&gt; desde la implementación, no en la API de modelo de objetos. List&lt;T&gt; está optimizado para el rendimiento de versiones a largo plazo. Por ejemplo, si devuelve List&lt;T&gt; al código del cliente, no podrá recibir notificaciones cuando el código del cliente modifique la colección.</Description>
+   <Resolution Name="Default">Cambie '{0}' en {1} para que use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; o KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045">
+   <Name>No pasar tipos por referencia</Name>
+   <Description>Aunque algunas veces se pueden utilizar parámetros de referencia, esta utilización indica frecuentemente que el diseño no cumple con las instrucciones de diseño del código administrado.</Description>
+   <Resolution Name="Default">Considere el uso de un diseño que no requiera que {0} sea un parámetro de referencia.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182146.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Los identificadores deberían utilizar las mayúsculas y minúsculas correctamente</Name>
+   <Description>Los identificadores de tipo, espacio de nombres y miembro usan las mayúsculas y minúsculas como en Pascal. Los identificadores de parámetro usan las mayúsculas y minúsculas como en Camel. Los acrónimos de dos letras en estos identificadores deben ir en mayúsculas; por ejemplo, use System.IO en lugar de System.Io. Los acrónimos de tres o más letras deben usar las mayúsculas y minúsculas como en Pascal; por ejemplo, use System.Xml en lugar de System.XML. La convención de mayúsculas y minúsculas Pascal pone en mayúscula la primera letra de cada palabra, como en BackColor. La convención de mayúsculas y minúsculas Camel pone en minúscula la primera letra de la primera palabra y, en mayúscula, la primera letra de las palabras siguientes, como en backgroundColor. Si bien puede ser una práctica común para algunos acrónimos de dos letras no ponerlos totalmente en mayúsculas, no se deben excluir las infracciones de esta regla por esta razón. Por ejemplo, 'DbConnection', es común pero incorrecto; use DBConnection. Una infracción de esta regla puede ser necesaria por compatibilidad con esquemas de símbolos no administrados existentes. En general, sin embargo, estos símbolos no deberían estar visibles fuera del ensamblado que los usa.</Description>
+   <Resolution Name="MemberParameter">En el miembro {0}, corrija el uso de mayúsculas y minúsculas en '{1}' en el nombre del parámetro {2} cambiándolo a '{3}'.</Resolution>
+   <Resolution Name="Type">Corrija el uso de mayúsculas y minúsculas en '{0}' en el nombre del tipo {1} cambiándolo a '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720">
+   <Name>Los identificadores no deben contener nombres de tipo</Name>
+   <Description>Evite el uso de nombres de tipo específicos del lenguaje en parámetros y miembros, así como identificadores de tipo de datos en parámetros. Los nombres de tipo pueden no ser intuitivos para todos los desarrolladores. Se recomienda seleccionar un nombre genérico, como 'value', en su lugar. Si esto no es suficiente, procure usar el nombre de tipo que se define en la biblioteca de .NET Framework y evite totalmente los nombres de tipo específicos del lenguaje. Algunos ejemplos de nombres de tipo específicos de C# son 'float' (use 'Single' si un nombre genérico no es suficiente) y 'ulong' (use 'UInt64' si un nombre genérico no es suficiente).</Description>
+   <Resolution Name="LanguageIndependentMemberParameter">En el miembro {0}, considere reemplazar el identificador del tipo de datos '{1}' en el nombre del parámetro {2} por un término más genérico, como 'value'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb531486.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Marque los ensamblados con CLSCompliantAttribute</Name>
+   <Description>Los ensamblados deben establecer explícitamente ser conformes a CLS usando el atributo CLSCompliant. Un ensamblado sin este atributo no es conforme a CLS. Los ensamblados, módulos y tipos pueden ser conformes a CLS incluso si alguna parte del ensamblado, módulo o tipo no son conformes a CLS. Se aplican las siguientes reglas: 1) Si el elemento está marcado como CLSCompliant, cualquier miembro no compatible debe tener el atributo CLSCompliant presente con el argumento establecido como false. 2) Se debe proporcionar un miembro alternativo conforme a CLS comparable con cada miembro que no sea conforme a CLS.</Description>
+   <Resolution Name="Default">Marque {0} con CLSCompliant(true) porque expone tipos visibles externamente.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200">
+   <Name>Reiniciar para mantener los detalles de la pila</Name>
+   <Description>Utilice la instrucción de reinicio IL para mantener los detalles de la pila original cuando vaya a volver a provocar la excepción detectada.</Description>
+   <Resolution Name="Default">{0} vuelve a producir una excepción detectada y la especifica explícitamente como un argumento. Utilice 'throw' sin un argumento, para mantener la ubicación de la pila donde se provocó inicialmente la excepción.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182363.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad</Name>
+   <Description>Una cadena de comando SQL compilada a partir de datos proporcionados por el usuario es vulnerable a ataques pon inyección de código SQL. Microsoft SQL Server y otros servidores de bases de datos admiten procedimientos almacenados y consultas SQL parametrizadas, que reducen el riesgo de ataques por inyección.</Description>
+   <Resolution Name="WithNonLiterals">La cadena de consulta pasada a {0} en {1} podría contener las siguientes variables: {2}. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306">
+   <Name>Establecer configuración regional para tipos de datos</Name>
+   <Description>En la mayoría de casos, la configuración regional debe establecerse explícitamente como CultureInfo.InvariantCulture en las instancias de DataSet y DataTable. Una vez creada la instancia DataSet o DataTable, se establece la configuración regional en la referencia cultural actual. En la mayoría de casos, la configuración regional debe establecerse como CultureInfo.InvariantCulture para garantizar un comportamiento de ordenación adecuado en todas las referencias culturales.</Description>
+   <Resolution Name="Default">Asegúrese de establecer la propiedad Locale {0} donde {1} cree una instancia de este tipo.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182188.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Los tipos que poseen campos descartables deben ser descartables</Name>
+   <Description>Los tipos que declaran miembros descartables también deben implementar IDisposable. Si el tipo no posee ningún recurso no administrado, no implementar un finalizador.</Description>
+   <Resolution Name="DependsOnFix">Implemente IDisposable en {0} porque crea miembros de los tipos IDisposable siguientes: {1}. Si ya se había distribuido {0}, agregar nuevos miembros que implementen IDisposable en este tipo se considera un cambio rotundo para los consumidores existentes.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validar argumentos de métodos públicos" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validar argumentos de métodos públicos</Name>
+   <Description>Todos los argumentos de referencia pasados a métodos visibles externamente deben comprobarse para ver si son NULL (Nothing en VB). Si procede, produzca una excepción System.ArgumentNullException cuando el argumento sea NULL.</Description>
+   <Resolution Name="Reassigned">En el método {0} visible externamente, valide la variable local '{1}', que se reasignó desde el parámetro '{2}', antes de usarlo.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Categoría</String>
+  <String Key="Certainty">Certeza</String>
+  <String Key="CollapseAll">Contraer todo</String>
+  <String Key="CheckId">Comprobar id.</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">errores</String>
+  <String Key="ExpandAll">Expandir todo</String>
+  <String Key="Help">Ayuda</String>
+  <String Key="Line">Línea</String>
+  <String Key="Messages">mensajes</String>
+  <String Key="LocationNotStoredInPdb">[Ubicación no almacenada en Pdb]</String>
+  <String Key="Project">Proyecto</String>
+  <String Key="Resolution">Resolución</String>
+  <String Key="Rule">Regla</String>
+  <String Key="RuleFile">Archivo de regla</String>
+  <String Key="RuleDescription">Descripción de la regla</String>
+  <String Key="Source">Origen</String>
+  <String Key="Status">Estado</String>
+  <String Key="Target">Círculos concéntricos</String>
+  <String Key="Warning">Advertencia</String>
+  <String Key="Warnings">advertencias</String>
+  <String Key="ReportTitle">Informe de análisis del código</String>
+ </Localized>
+</FxCopReport>

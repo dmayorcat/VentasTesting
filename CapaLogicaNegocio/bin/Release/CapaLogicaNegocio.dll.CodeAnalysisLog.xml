@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio\bin\Release\CapaLogicaNegocio.dll">
+   <Modules>
+    <Module Name="capalogicanegocio.dll">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Firme 'CapaLogicaNegocio.dll' con una clave de nombre seguro.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Marque 'CapaLogicaNegocio.dll' con CLSCompliant(true) porque expone tipos visibles externamente.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="CapaLogicaNegocio">
+       <Types>
+        <Type Name="clsCargo" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="cls" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija el uso de mayúsculas y minúsculas en 'cls' en el nombre del tipo 'clsCargo' cambiándolo a 'Cls'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#BusquedaCargo(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Desechar (Dispose) objetos antes de perder el ámbito" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsCargo.cs" Line="73">En el método 'clsCargo.BusquedaCargo(string)', llame a System.IDisposable.Dispose en el objeto 'new DataTable()' antes de que todas las referencias a él estén fuera de ámbito.</Issue>
+            </Message>
+            <Message Id="System.Data.DataTable" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Name="ObjectCreation" Certainty="95" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsCargo.cs" Line="73">'clsCargo.BusquedaCargo(string)' crea una nueva instancia de 'DataTable' que no se usa nunca. Pase la instancia como un argumento a otro método, asigne la instancia a una variable o quite la creación del objeto si no es necesaria.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsCargo.cs" Line="73">Asegúrese de establecer la propiedad Locale DataTable donde 'clsCargo.BusquedaCargo(string)' cree una instancia de este tipo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="clsCategoria" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="cls" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija el uso de mayúsculas y minúsculas en 'cls' en el nombre del tipo 'clsCategoria' cambiándolo a 'Cls'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#BuscarCategoria(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Desechar (Dispose) objetos antes de perder el ámbito" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsCategoria.cs" Line="61">En el método 'clsCategoria.BuscarCategoria(string)', llame a System.IDisposable.Dispose en el objeto 'new DataTable()' antes de que todas las referencias a él estén fuera de ámbito.</Issue>
+            </Message>
+            <Message Id="System.Data.DataTable" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Name="ObjectCreation" Certainty="95" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsCategoria.cs" Line="61">'clsCategoria.BuscarCategoria(string)' crea una nueva instancia de 'DataTable' que no se usa nunca. Pase la instancia como un argumento a otro método, asigne la instancia a una variable o quite la creación del objeto si no es necesaria.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsCategoria.cs" Line="61">Asegúrese de establecer la propiedad Locale DataTable donde 'clsCategoria.BuscarCategoria(string)' cree una instancia de este tipo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="clsCliente" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="cls" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija el uso de mayúsculas y minúsculas en 'cls' en el nombre del tipo 'clsCliente' cambiándolo a 'Cls'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#BuscarCliente(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Desechar (Dispose) objetos antes de perder el ámbito" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsCliente.cs" Line="55">En el método 'clsCliente.BuscarCliente(string)', llame a System.IDisposable.Dispose en el objeto 'new DataTable()' antes de que todas las referencias a él estén fuera de ámbito.</Issue>
+            </Message>
+            <Message Id="System.Data.DataTable" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Name="ObjectCreation" Certainty="95" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsCliente.cs" Line="55">'clsCliente.BuscarCliente(string)' crea una nueva instancia de 'DataTable' que no se usa nunca. Pase la instancia como un argumento a otro método, asigne la instancia a una variable o quite la creación del objeto si no es necesaria.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsCliente.cs" Line="55">Asegúrese de establecer la propiedad Locale DataTable donde 'clsCliente.BuscarCliente(string)' cree una instancia de este tipo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="clsDetalleVenta" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="cls" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija el uso de mayúsculas y minúsculas en 'cls' en el nombre del tipo 'clsDetalleVenta' cambiándolo a 'Cls'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="clsEmpleado" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="cls" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija el uso de mayúsculas y minúsculas en 'cls' en el nombre del tipo 'clsEmpleado' cambiándolo a 'Cls'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#BuscarEmpleado(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Desechar (Dispose) objetos antes de perder el ámbito" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsEmpleado.cs" Line="69">En el método 'clsEmpleado.BuscarEmpleado(string)', llame a System.IDisposable.Dispose en el objeto 'new DataTable()' antes de que todas las referencias a él estén fuera de ámbito.</Issue>
+            </Message>
+            <Message Id="System.Data.DataTable" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Name="ObjectCreation" Certainty="95" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsEmpleado.cs" Line="69">'clsEmpleado.BuscarEmpleado(string)' crea una nueva instancia de 'DataTable' que no se usa nunca. Pase la instancia como un argumento a otro método, asigne la instancia a una variable o quite la creación del objeto si no es necesaria.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsEmpleado.cs" Line="69">Asegúrese de establecer la propiedad Locale DataTable donde 'clsEmpleado.BuscarEmpleado(string)' cree una instancia de este tipo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GenerarIdEmpleado()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Convert.ToInt32(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsEmpleado.cs" Line="60">Puesto que el comportamiento de 'Convert.ToInt32(string)' podría variar en función de la configuración regional del usuario actual, reemplace esta llamada en 'clsEmpleado.GenerarIdEmpleado()' por una llamada a 'Convert.ToInt32(string, IFormatProvider)'. Si el resultado de 'Convert.ToInt32(string, IFormatProvider)' estará basado en los datos proporcionados por el usuario, especifique 'CultureInfo.CurrentCulture' como parámetro 'IFormatProvider'. De lo contrario, si el resultado estará basado en datos almacenados a los que tiene acceso el software, como cuando se cargan desde un disco o una base de datos, especifique 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Int32)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsEmpleado.cs" Line="64">Puesto que el comportamiento de 'Convert.ToString(int)' podría variar en función de la configuración regional del usuario actual, reemplace esta llamada en 'clsEmpleado.GenerarIdEmpleado()' por una llamada a 'Convert.ToString(int, IFormatProvider)'. Si el resultado de 'Convert.ToString(int, IFormatProvider)' se mostrará al usuario, especifique 'CultureInfo.CurrentCulture' como parámetro 'IFormatProvider'. De lo contrario, si el resultado se almacenará y será el software quien tenga acceso a él, como cuando se almacena en un disco o en una base de datos, especifique 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="clsProducto" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="cls" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija el uso de mayúsculas y minúsculas en 'cls' en el nombre del tipo 'clsProducto' cambiándolo a 'Cls'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#BusquedaProductos(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Desechar (Dispose) objetos antes de perder el ámbito" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsProducto.cs" Line="80">En el método 'clsProducto.BusquedaProductos(string)', llame a System.IDisposable.Dispose en el objeto 'dt' antes de que todas las referencias a él estén fuera de ámbito.</Issue>
+            </Message>
+            <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsProducto.cs" Line="80">Asegúrese de establecer la propiedad Locale DataTable donde 'clsProducto.BusquedaProductos(string)' cree una instancia de este tipo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="clsUsuarios" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="cls" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija el uso de mayúsculas y minúsculas en 'cls' en el nombre del tipo 'clsUsuarios' cambiándolo a 'Cls'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="clsVentas" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="cls" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">Corrija el uso de mayúsculas y minúsculas en 'cls' en el nombre del tipo 'clsVentas' cambiándolo a 'Cls'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GenerarIdVenta()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Convert.ToInt32(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsVentas.cs" Line="58">Puesto que el comportamiento de 'Convert.ToInt32(string)' podría variar en función de la configuración regional del usuario actual, reemplace esta llamada en 'clsVentas.GenerarIdVenta()' por una llamada a 'Convert.ToInt32(string, IFormatProvider)'. Si el resultado de 'Convert.ToInt32(string, IFormatProvider)' estará basado en los datos proporcionados por el usuario, especifique 'CultureInfo.CurrentCulture' como parámetro 'IFormatProvider'. De lo contrario, si el resultado estará basado en datos almacenados a los que tiene acceso el software, como cuando se cargan desde un disco o una base de datos, especifique 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Int32)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsVentas.cs" Line="62">Puesto que el comportamiento de 'Convert.ToString(int)' podría variar en función de la configuración regional del usuario actual, reemplace esta llamada en 'clsVentas.GenerarIdVenta()' por una llamada a 'Convert.ToString(int, IFormatProvider)'. Si el resultado de 'Convert.ToString(int, IFormatProvider)' se mostrará al usuario, especifique 'CultureInfo.CurrentCulture' como parámetro 'IFormatProvider'. De lo contrario, si el resultado se almacenará y será el software quien tenga acceso a él, como cuando se almacena en un disco o en una base de datos, especifique 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GenerarSerieDocumento()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Convert.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsVentas.cs" Line="31">Puesto que el comportamiento de 'Convert.ToString(string)' podría variar en función de la configuración regional del usuario actual, reemplace esta llamada en 'clsVentas.GenerarSerieDocumento()' por una llamada a 'Convert.ToString(string, IFormatProvider)'. Si el resultado de 'Convert.ToString(string, IFormatProvider)' se mostrará al usuario, especifique 'CultureInfo.CurrentCulture' como parámetro 'IFormatProvider'. De lo contrario, si el resultado se almacenará y será el software quien tenga acceso a él, como cuando se almacena en un disco o en una base de datos, especifique 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsVentas.cs" Line="35">Puesto que el comportamiento de 'Convert.ToString(string)' podría variar en función de la configuración regional del usuario actual, reemplace esta llamada en 'clsVentas.GenerarSerieDocumento()' por una llamada a 'Convert.ToString(string, IFormatProvider)'. Si el resultado de 'Convert.ToString(string, IFormatProvider)' se mostrará al usuario, especifique 'CultureInfo.CurrentCulture' como parámetro 'IFormatProvider'. De lo contrario, si el resultado se almacenará y será el software quien tenga acceso a él, como cuando se almacena en un disco o en una base de datos, especifique 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NumeroComprobante(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Convert.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2018-12-08 14:26:32Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsVentas.cs" Line="45">Puesto que el comportamiento de 'Convert.ToString(string)' podría variar en función de la configuración regional del usuario actual, reemplace esta llamada en 'clsVentas.NumeroComprobante(string)' por una llamada a 'Convert.ToString(string, IFormatProvider)'. Si el resultado de 'Convert.ToString(string, IFormatProvider)' se mostrará al usuario, especifique 'CultureInfo.CurrentCulture' como parámetro 'IFormatProvider'. De lo contrario, si el resultado se almacenará y será el software quien tenga acceso a él, como cuando se almacena en un disco o en una base de datos, especifique 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio" File="clsVentas.cs" Line="49">Puesto que el comportamiento de 'Convert.ToString(string)' podría variar en función de la configuración regional del usuario actual, reemplace esta llamada en 'clsVentas.NumeroComprobante(string)' por una llamada a 'Convert.ToString(string, IFormatProvider)'. Si el resultado de 'Convert.ToString(string, IFormatProvider)' se mostrará al usuario, especifique 'CultureInfo.CurrentCulture' como parámetro 'IFormatProvider'. De lo contrario, si el resultado se almacenará y será el software quien tenga acceso a él, como cuando se almacena en un disco o en una base de datos, especifique 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Los ensamblados deben tener nombres seguros válidos</Name>
+   <Description>Puede que el ensamblado no tenga un nombre seguro, que no sea válido o que éste sea válido únicamente por la configuración del equipo. No se puede implementar el ensamblado en este estado. Las causas más probables son: 1) El contenido del ensamblado se modificó después de firmarlo. 2) Error en el proceso de firma. 3) El ensamblado tenía firma retardada. 4) Existía una clave del Registro que permitió que se realizara la comprobación (de lo contrario no se hubiera realizado).</Description>
+   <Resolution Name="NoStrongName">Firme {0} con una clave de nombre seguro.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Desechar (Dispose) objetos antes de perder el ámbito" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Desechar (Dispose) objetos antes de perder el ámbito</Name>
+   <Description>Si un objeto que se puede desechar (método Dispose) no se desecha de forma explícita antes de que todas las referencias a él estén fuera de ámbito, el objeto se desechará en algún momento indeterminado cuando el recolector de elementos no utilizados ejecute el finalizador del objeto. Puesto que podría producirse un evento excepcional que impida que se ejecute el finalizador del objeto, el objeto debe desecharse de forma explícita.</Description>
+   <Resolution Name="NonExceptionEdge">En el método {0}, llame a System.IDisposable.Dispose en el objeto {1} antes de que todas las referencias a él estén fuera de ámbito.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806">
+   <Name>No omitir resultados del método</Name>
+   <Description>El resultado de los métodos que devuelven nuevas instancias de cadenas debe estar asignado a una variable y usarse en consecuencia. Si el resultado de un método que crea un objeto nuevo, como String.ToLower(), no está asignado a una variable, la llamada no sirve para nada.</Description>
+   <Resolution Name="ObjectCreation">{0} crea una nueva instancia de {1} que no se usa nunca. Pase la instancia como un argumento a otro método, asigne la instancia a una variable o quite la creación del objeto si no es necesaria.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182273.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Los identificadores deberían utilizar las mayúsculas y minúsculas correctamente</Name>
+   <Description>Los identificadores de tipo, espacio de nombres y miembro usan las mayúsculas y minúsculas como en Pascal. Los identificadores de parámetro usan las mayúsculas y minúsculas como en Camel. Los acrónimos de dos letras en estos identificadores deben ir en mayúsculas; por ejemplo, use System.IO en lugar de System.Io. Los acrónimos de tres o más letras deben usar las mayúsculas y minúsculas como en Pascal; por ejemplo, use System.Xml en lugar de System.XML. La convención de mayúsculas y minúsculas Pascal pone en mayúscula la primera letra de cada palabra, como en BackColor. La convención de mayúsculas y minúsculas Camel pone en minúscula la primera letra de la primera palabra y, en mayúscula, la primera letra de las palabras siguientes, como en backgroundColor. Si bien puede ser una práctica común para algunos acrónimos de dos letras no ponerlos totalmente en mayúsculas, no se deben excluir las infracciones de esta regla por esta razón. Por ejemplo, 'DbConnection', es común pero incorrecto; use DBConnection. Una infracción de esta regla puede ser necesaria por compatibilidad con esquemas de símbolos no administrados existentes. En general, sin embargo, estos símbolos no deberían estar visibles fuera del ensamblado que los usa.</Description>
+   <Resolution Name="Type">Corrija el uso de mayúsculas y minúsculas en '{0}' en el nombre del tipo {1} cambiándolo a '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Marque los ensamblados con CLSCompliantAttribute</Name>
+   <Description>Los ensamblados deben establecer explícitamente ser conformes a CLS usando el atributo CLSCompliant. Un ensamblado sin este atributo no es conforme a CLS. Los ensamblados, módulos y tipos pueden ser conformes a CLS incluso si alguna parte del ensamblado, módulo o tipo no son conformes a CLS. Se aplican las siguientes reglas: 1) Si el elemento está marcado como CLSCompliant, cualquier miembro no compatible debe tener el atributo CLSCompliant presente con el argumento establecido como false. 2) Se debe proporcionar un miembro alternativo conforme a CLS comparable con cada miembro que no sea conforme a CLS.</Description>
+   <Resolution Name="Default">Marque {0} con CLSCompliant(true) porque expone tipos visibles externamente.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306">
+   <Name>Establecer configuración regional para tipos de datos</Name>
+   <Description>En la mayoría de casos, la configuración regional debe establecerse explícitamente como CultureInfo.InvariantCulture en las instancias de DataSet y DataTable. Una vez creada la instancia DataSet o DataTable, se establece la configuración regional en la referencia cultural actual. En la mayoría de casos, la configuración regional debe establecerse como CultureInfo.InvariantCulture para garantizar un comportamiento de ordenación adecuado en todas las referencias culturales.</Description>
+   <Resolution Name="Default">Asegúrese de establecer la propiedad Locale {0} donde {1} cree una instancia de este tipo.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182188.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Especificar IFormatProvider</Name>
+   <Description>Si existe una sobrecarga que toma un argumento IFormatProvider, se debe llamar siempre en favor de una sobrecarga que no lo haga. Algunos métodos del runtime convierten un valor a o desde una representación de cadena y toman un parámetro de cadena que contiene uno o varios caracteres, denominados especificadores de formato, que indican cómo se debe convertir el valor. Si el significado del especificador de formato varía por referencia cultural, un objeto de formato proporciona los caracteres usados en la representación de cadena. En escenarios donde el comportamiento de ordenación y comparación no debería cambiar nunca entre referecias culturales, especifique CultureInfo.InvariantCulture; de lo contrario, especifique CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternate">Puesto que el comportamiento de {0} podría variar en función de la configuración regional del usuario actual, reemplace esta llamada en {1} por una llamada a {2}. Si el resultado de {2} estará basado en los datos proporcionados por el usuario, especifique {3} como parámetro 'IFormatProvider'. De lo contrario, si el resultado estará basado en datos almacenados a los que tiene acceso el software, como cuando se cargan desde un disco o una base de datos, especifique {4}.</Resolution>
+   <Resolution Name="IFormatProviderAlternateString">Puesto que el comportamiento de {0} podría variar en función de la configuración regional del usuario actual, reemplace esta llamada en {1} por una llamada a {2}. Si el resultado de {2} se mostrará al usuario, especifique {3} como parámetro 'IFormatProvider'. De lo contrario, si el resultado se almacenará y será el software quien tenga acceso a él, como cuando se almacena en un disco o en una base de datos, especifique {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Categoría</String>
+  <String Key="Certainty">Certeza</String>
+  <String Key="CollapseAll">Contraer todo</String>
+  <String Key="CheckId">Comprobar id.</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">errores</String>
+  <String Key="ExpandAll">Expandir todo</String>
+  <String Key="Help">Ayuda</String>
+  <String Key="Line">Línea</String>
+  <String Key="Messages">mensajes</String>
+  <String Key="LocationNotStoredInPdb">[Ubicación no almacenada en Pdb]</String>
+  <String Key="Project">Proyecto</String>
+  <String Key="Resolution">Resolución</String>
+  <String Key="Rule">Regla</String>
+  <String Key="RuleFile">Archivo de regla</String>
+  <String Key="RuleDescription">Descripción de la regla</String>
+  <String Key="Source">Origen</String>
+  <String Key="Status">Estado</String>
+  <String Key="Target">Círculos concéntricos</String>
+  <String Key="Warning">Advertencia</String>
+  <String Key="Warnings">advertencias</String>
+  <String Key="ReportTitle">Informe de análisis del código</String>
+ </Localized>
+</FxCopReport>

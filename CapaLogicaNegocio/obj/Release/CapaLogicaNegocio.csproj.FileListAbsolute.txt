@@ -1,0 +1,11 @@
+C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio\bin\Release\CapaLogicaNegocio.dll
+C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio\bin\Release\CapaLogicaNegocio.pdb
+C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio\bin\Release\CapaEnlaceDatos.dll
+C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio\bin\Release\CapaEnlaceDatos.pdb
+C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio\obj\Release\CapaLogicaNegocio.csprojAssemblyReference.cache
+C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio\obj\Release\CapaLogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio\obj\Release\CapaLogicaNegocio.csproj.CopyComplete
+C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio\obj\Release\CapaLogicaNegocio.dll
+C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio\obj\Release\CapaLogicaNegocio.pdb
+C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio\bin\Release\CapaLogicaNegocio.dll.CodeAnalysisLog.xml
+C:\Users\Asus\Downloads\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas C# y Sql by Start Tec\Sistema de Ventas\CapaLogicaNegocio\bin\Release\CapaLogicaNegocio.dll.lastcodeanalysissucceeded
